@@ -1,0 +1,123 @@
+.work {
+    background: url('assets/images/1-grain.jpg') no-repeat;
+    background-size: cover;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    /* overflow: hidden; */
+}
+
+.workBackground {
+    visibility: hidden;
+    background-size: cover;
+    /* height: 100vh; */
+    height: fit-content;
+    background-color: black;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    animation-name: workBackground-animation;
+    animation-duration: 0.60s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.backArrowContainer {
+    width: 4.2rem;
+    overflow: hidden;
+    position: relative;
+    top: 1rem;
+    right: 2rem;
+    transition: right 0.4s;
+}
+
+.backArrowContainer:hover {
+    right: 2.5rem;
+    transition: right 0.4s;
+}
+
+.backArrow {
+    font-size: 4rem;
+    visibility: hidden;
+    animation-name: backArrow-animation;
+    animation-duration: 0.9s;
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+    user-select: none;
+}
+
+.workTitleContainer {
+    overflow: hidden;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    width: fit-content;
+    height: fit-content;
+    line-height: 8.5rem;
+}
+
+.workH1 {
+    /* font-size: 6.4rem; */
+    font-size: 8rem;
+    font-family: 'Panchang';
+    visibility: hidden;
+    animation-name: work-animation;
+    animation-duration: 0.8s;
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+}
+
+.workCardsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 4rem;
+    width: 100%;
+    height: fit-content;
+    margin-top: 2.5rem;
+    /* margin-left: 0.8rem; */
+}
+
+.workCard {
+    width: 47.2%;
+    height: 20rem;
+    border: 1px solid magenta;
+    /* background-color: magenta; */
+}
+
+/* .workCard img {
+    width: 500px;
+    height: 600px;
+} */
+
+@keyframes backArrow-animation {
+    0% {
+        transform: translateY(-5rem);
+    }
+    100% {
+        transform: translateY(0rem);
+        visibility: visible;
+	}
+}
+
+@keyframes work-animation {
+    0% {
+        transform: translateX(80%);
+    }
+    100% {
+        transform: translateX(0%);
+        visibility: visible;
+	}
+}
+
+@keyframes workBackground-animation {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+        visibility: visible;
+    }
+}

@@ -1,0 +1,123 @@
+.firstPage {
+    background: url('assets/images/1-grain.jpg') no-repeat;
+    /* background-color: black; */
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: right;
+}
+
+.menu {
+    margin-top: 3rem;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    font-family: 'NeueMachinaPlain';
+    width: fit-content;
+    align-items: flex-end;
+}
+
+.menuP {
+    margin-bottom: 1rem;
+    font-weight: 300;
+    font-size: 2.5rem;
+    color: white;
+    text-decoration: none;
+    width: fit-content;
+    /* transition: letter-spacing 0.3s; */
+}
+
+.aboutLink {
+    margin-right: 19rem;
+}
+.workLink {
+    margin-right: 13rem;
+}
+.contactLink {
+    margin-right: 3rem;
+    cursor: pointer;
+}
+
+.menuP:hover {
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: 0.5rem;
+    transition: letter-spacing 0.5s;
+}
+
+.centralText {
+    color: white;
+    font-size: 4rem;
+    font-weight: 300;
+    position: absolute;
+    top: 13rem;
+}
+
+.p1 {
+    margin-left: 14rem;
+    padding-bottom: 2.5rem;
+    font-weight: 700;
+    font-size: 8rem;
+    font-family: 'Panchang';
+}
+
+.p2 {
+    width: 30rem;
+    margin-left: 22rem;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nuno {
+    border-bottom: 1px solid white;
+}
+
+.p3 {
+    margin-left: 30rem;
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.slider {
+    color: white;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+.slide {
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slide span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll 20s linear infinite;
+}
+
+.slide2 span {
+    animation-delay: 10s;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
+    }
+}

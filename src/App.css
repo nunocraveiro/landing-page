@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'FragmentGlare';
+  src: url('./components/assets/fonts/PPFragment1.3/PPFragment-GlareLight.otf') format('opentype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'FragmentGlare';
+  src: url('./components/assets/fonts/PPFragment1.3/PPFragment-GlareRegular.otf') format('opentype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'FragmentGlare';
+  src: url('./components/assets/fonts/PPFragment1.3/PPFragment-GlareExtraBold.otf') format('opentype');
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'FragmentSans';
+  src: url('./components/assets/fonts/PPFragment1.3/PPFragment-SansLight.otf') format('opentype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'FragmentSans';
+  src: url('./components/assets/fonts/PPFragment1.3/PPFragment-SansRegular.otf') format('opentype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'FragmentSans';
+  src: url('./components/assets/fonts/PPFragment1.3/PPFragment-SansExtraBold.otf') format('opentype');
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'FragmentSerif';
+  src: url('./components/assets/fonts/PPFragment1.3/PPFragment-SerifLight.otf') format('opentype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'FragmentSerif';
+  src: url('./components/assets/fonts/PPFragment1.3/PPFragment-SerifRegular.otf') format('opentype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'FragmentSerif';
+  src: url('./components/assets/fonts/PPFragment1.3/PPFragment-SerifExtraBold.otf') format('opentype');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'NeueMachinaInktrap';
+  src: url('./components/assets/fonts/PPNeueMachina/PPNeueMachina-InktrapLight.otf') format('opentype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'NeueMachinaInktrap';
+  src: url('./components/assets/fonts/PPNeueMachina/PPNeueMachina-InktrapRegular.otf') format('opentype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'NeueMachinaInktrap';
+  src: url('./components/assets/fonts/PPNeueMachina/PPNeueMachina-InktrapUltrabold.otf') format('opentype');
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'NeueMachinaPlain';
+  src: url('./components/assets/fonts/PPNeueMachina/PPNeueMachina-PlainLight.otf') format('opentype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'NeueMachinaPlain';
+  src: url('./components/assets/fonts/PPNeueMachina/PPNeueMachina-PlainRegular.otf') format('opentype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'NeueMachinaPlain';
+  src: url('./components/assets/fonts/PPNeueMachina/PPNeueMachina-PlainUltrabold.otf') format('opentype');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Panchang';
+  src: url('./components/assets/fonts/Panchang/Panchang-Semibold.otf') format('opentype');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Panchang';
+  src: url('./components/assets/fonts/Panchang/Panchang-Bold.otf') format('opentype');
+  font-weight: 800;
+}

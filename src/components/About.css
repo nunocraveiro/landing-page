@@ -1,0 +1,116 @@
+.about {
+    background: url('assets/images/1-grain.jpg') no-repeat;
+    background-size: cover;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    overflow: hidden;
+}
+
+.aboutBackground {
+    visibility: hidden;
+    background-size: cover;
+    height: 100vh;
+    background-color: black;
+    padding-top: 1rem;
+    padding-left: 4rem;
+    animation-name: background-animation;
+    animation-duration: 0.7s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.backArrowContainer {
+    width: 4.2rem;
+    overflow: hidden;
+    position: relative;
+    top: 1rem;
+    right: 2rem;
+    transition: right 0.4s;
+}
+
+.backArrowContainer:hover {
+    right: 2.5rem;
+    transition: right 0.4s;
+}
+
+.backArrow {
+    font-size: 4rem;
+    visibility: hidden;
+    animation-name: backArrow-animation;
+    animation-duration: 0.75s;
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+    user-select: none;
+}
+
+.aboutTitleContainer {
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    height: 10rem;
+}
+
+.aboutH1 {
+    font-size: 8rem;
+    font-family: 'Panchang';
+    visibility: hidden;
+    animation-name: about-animation;
+    animation-duration: 0.75s;
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+}
+
+.aboutBackground h2 {
+    margin-bottom: 0.5rem;
+}
+
+.aboutText {
+    margin-bottom: 2.2rem;
+}
+
+.aboutText p {
+    width: 85%;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.8rem;
+}
+
+.container div {
+    width: 18rem;
+}
+
+@keyframes backArrow-animation {
+    0% {
+        transform: translateX(5rem);
+    }
+    100% {
+        transform: translateX(0rem);
+        visibility: visible;
+	}
+}
+
+@keyframes about-animation {
+    0% {
+        transform: translateY(9rem);
+    }
+    100% {
+        transform: translateY(0rem);
+        visibility: visible;
+	}
+}
+
+@keyframes background-animation {
+    0% {
+        transform: translateY(45rem);
+    }
+    100% {
+        transform: translateY(0rem);
+        visibility: visible;
+    }
+}
