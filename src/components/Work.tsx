@@ -19,18 +19,19 @@ const Work = () => {
                 <section className='workCardsContainer'>
                     <div className='workCard'>
                         <img className='todoAppImg' src={todoAppImg} alt="todoapp" />
-                        {/* <p className='imgLink'>https://deluxe-nasturtium-b5b5b8.netlify.app/</p> */}
-                        <p className='imgLink'>Link to website</p>
+                        <a className='imgLink' href='https://deluxe-nasturtium-b5b5b8.netlify.app' target="_blank" rel="noopener noreferrer">Go to website</a>
                         <h2 className='workTitle'>ToDo App</h2>
                         <p className='workDescription'>Simple todo app created with React with a retro inspired design and a more unusual layout.</p>
                     </div>
                     <div className='workCard'>
                         <img src={milkAppImg} alt="milkapp" />
+                        <a className='imgLink' href='https://github.com/nunocraveiro/milk-app' target="_blank" rel="noopener noreferrer">Go to website</a>
                         <h2 className='workTitle'>E-Commerce App</h2>
                         <p className='workDescription'>Fictional milk products store app with search/filter/cart management functionalities. Fullstack Typescript app with a simple NodeJs + Express server and a React frontend.</p>
                     </div>
                     <div className='workCard'>
                         <img src={flightsAppImg} alt="flightsapp" />
+                        <a className='imgLink' href='https://github.com/nunocraveiro/flightFinder' target="_blank" rel="noopener noreferrer">Go to website</a>
                         <h2 className='workTitle'>Flight Finder App</h2>
                         <p className='workDescription'>Flight finder app with a focus on cleaner design. Fullstack app with a NodeJs + Express server and a React frontend.</p>
                     </div>
