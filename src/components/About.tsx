@@ -22,8 +22,8 @@ const About = () => {
                 <div className='mainSkills container'>
                     <div>
                         <p>Frontend development</p>
-                        <p>UX/UI design</p>
                         <p>Backend development</p>
+                        <p>UX/UI design</p>
                     </div>
                     <div>
                         <p>Music composition</p>

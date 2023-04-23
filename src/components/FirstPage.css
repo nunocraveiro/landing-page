@@ -1,6 +1,5 @@
 .firstPage {
     background: url('assets/images/1-grain.jpg') no-repeat;
-    /* background-color: black; */
     background-size: cover;
     height: 100vh;
     display: flex;
@@ -16,6 +15,22 @@
     text-align: right;
 }
 
+.backgroundCredit {
+    color: rgb(191, 191, 191);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    transform: rotate(90deg);
+    position: absolute;
+    bottom: 7.6rem;
+    left: -5rem;
+    word-spacing: 0.2rem;
+}
+
+.creditLink {
+    color: white;
+}
+
 .menu {
     margin-top: 3rem;
     margin-left: auto;
@@ -23,6 +38,7 @@
     flex-direction: column;
     font-family: 'NeueMachinaPlain';
     width: fit-content;
+    height: 20rem;
     align-items: flex-end;
 }
 
@@ -33,25 +49,96 @@
     color: white;
     text-decoration: none;
     width: fit-content;
-    /* transition: letter-spacing 0.3s; */
+}
+
+.aboutLink:hover, .workLink:hover {
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: 0.5rem;
+    transition: letter-spacing 0.5s;
+}
+
+.contactHover {
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: 0.5rem;
+    transition: letter-spacing 0.5s;
 }
 
 .aboutLink {
     margin-right: 19rem;
 }
+
 .workLink {
     margin-right: 13rem;
 }
+
 .contactLink {
     margin-right: 3rem;
     cursor: pointer;
+    user-select: none;
+    margin-bottom: 0rem;
 }
 
-.menuP:hover {
-    font-weight: 500;
-    font-style: italic;
-    letter-spacing: 0.5rem;
-    transition: letter-spacing 0.5s;
+.contactLinksContainer {
+    overflow: hidden;
+}
+
+.contactLinks {
+    color: white;
+    text-align: right;
+    font-size: 1.1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    margin-right: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 8rem;
+    height: 9rem;
+    position: relative;
+    top: -10rem;
+    opacity: 0;
+    transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.animateLinks {
+    top: 0rem;
+    opacity: 1;
+    transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.contactLinkDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.contactLinks img {
+    filter: brightness(0) invert(1);
+    width: 1.5rem;
+}
+
+.contactP {
+    margin-right: 0.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+.contactImg {
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+.contactImg:hover {
+    transform: scale(0.96);
+}
+
+.contactP:hover {
+    border-bottom: 1px solid white;
 }
 
 .centralText {
@@ -62,12 +149,22 @@
     top: 13rem;
 }
 
-.p1 {
+.hello {
     margin-left: 14rem;
     padding-bottom: 2.5rem;
     font-weight: 700;
     font-size: 8rem;
     font-family: 'Panchang';
+}
+
+.helloSpan {
+    position: relative;
+    animation-name: move-text;
+    animation-duration: 0.75s;
+    animation-delay: calc(var(--animation-order) * 100ms);
+    animation-fill-mode: forwards;
+    bottom: -1em;
+    opacity: 0;
 }
 
 .p2 {
@@ -88,36 +185,61 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.slider {
-    color: white;
+.sliderContainer {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 4rem;
+    background-color: rgba(255,255,255,0);
     overflow: hidden;
-    margin-bottom: 1.5rem;
+}
+
+.slider {
+    display: flex;
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+}
+
+.slider div {
+    display: flex;
+    animation: scrollText 8s infinite linear;
+    /* animation-delay: 0.8s; */
+}
+
+.slider h1 {
+    margin: 0;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
+    font-size: 1.05rem;
+    color: white;
+    /* color: rgb(245, 245, 245); */
 }
 
-.slide {
-    position: absolute;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 100%;
+.slider span {
+    margin-right: 0.8rem;
 }
 
-.slide span {
-    display: inline-block;
-    padding-left: 100%;
-    animation: scroll 20s linear infinite;
+@keyframes scrollText {
+    from {
+        transform: translateX(0%); 
+    }
+    to {
+        transform: translateX(-50%);
+    }
 }
 
-.slide2 span {
-    animation-delay: 10s;
-}
-
-@keyframes scroll {
+@keyframes move-text {
     0% {
-        transform: translate(0, 0);
+      bottom: -0.2em;
     }
     100% {
-        transform: translate(-100%, 0);
+      bottom: 0;
+      opacity: 1;
     }
 }
