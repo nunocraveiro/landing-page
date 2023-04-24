@@ -1,6 +1,5 @@
-.firstPage {
-    background: url('assets/images/1-grain.jpg') no-repeat;
-    background-size: cover;
+.home {
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -19,11 +18,11 @@
     color: rgb(191, 191, 191);
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     transform: rotate(90deg);
     position: absolute;
-    bottom: 7.6rem;
-    left: -5rem;
+    bottom: 7rem;
+    left: -4rem;
     word-spacing: 0.2rem;
 }
 
@@ -117,7 +116,7 @@
 
 .contactLinks img {
     filter: brightness(0) invert(1);
-    width: 1.5rem;
+    width: 1rem;
 }
 
 .contactP {
@@ -131,6 +130,8 @@
     cursor: pointer;
     color: white;
     text-decoration: none;
+    font-size: 1rem;
+    padding-top: 0.17rem;
 }
 
 .contactImg:hover {
@@ -138,7 +139,7 @@
 }
 
 .contactP:hover {
-    border-bottom: 1px solid white;
+    text-decoration: underline;
 }
 
 .centralText {
@@ -161,7 +162,7 @@
     position: relative;
     animation-name: move-text;
     animation-duration: 0.75s;
-    animation-delay: calc(var(--animation-order) * 100ms);
+    animation-delay: calc(0.35s + var(--animation-order) * 100ms);
     animation-fill-mode: forwards;
     bottom: -1em;
     opacity: 0;
@@ -208,8 +209,7 @@
 
 .slider div {
     display: flex;
-    animation: scrollText 8s infinite linear;
-    /* animation-delay: 0.8s; */
+    animation: scrollText 16s infinite linear;
 }
 
 .slider h1 {
@@ -218,7 +218,6 @@
     font-weight: 300;
     font-size: 1.05rem;
     color: white;
-    /* color: rgb(245, 245, 245); */
 }
 
 .slider span {
@@ -240,6 +239,15 @@
     }
     100% {
       bottom: 0;
+      opacity: 1;
+    }
+}
+
+@keyframes home-animation {
+    0% {
+      opacity: 0;
+    }
+    100% {
       opacity: 1;
     }
 }

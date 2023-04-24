@@ -1,16 +1,10 @@
 .work {
-    background: url('assets/images/1-grain.jpg') no-repeat;
-    background-size: cover;
     height: 100vh;
     font-family: 'Montserrat', sans-serif;
     color: white;
-}
-
-.workBackground {
     visibility: hidden;
-    background-size: cover;
-    height: fit-content;
     background-color: black;
+    height: fit-content;
     padding-top: 1rem;
     padding-bottom: 3rem;
     padding-left: 4rem;

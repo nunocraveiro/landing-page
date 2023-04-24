@@ -1,23 +1,12 @@
 .about {
-    background: url('assets/images/1-grain.jpg') no-repeat;
-    background-size: cover;
-    height: 100vh;
     font-family: 'Montserrat', sans-serif;
     color: white;
-    overflow: hidden;
-}
-
-.aboutBackground {
     visibility: hidden;
-    background-size: cover;
     height: 100vh;
     background-color: black;
     padding-top: 1rem;
     padding-left: 4rem;
-    animation-name: background-animation;
-    animation-duration: 0.7s;
-    animation-delay: 0.2s;
-    animation-fill-mode: forwards;
+    animation: background-animation 0.7s 0.2s forwards;
 }
 
 .backArrowContainer {
@@ -37,11 +26,7 @@
 .backArrow {
     font-size: 4rem;
     visibility: hidden;
-    animation-name: backArrow-animation;
-    animation-duration: 0.75s;
-    animation-delay: 0.8s;
-    animation-fill-mode: forwards;
-    cursor: pointer;
+    animation: backArrow-animation 0.75s 0.8s forwards;
     user-select: none;
 }
 
@@ -55,10 +40,7 @@
     font-size: 8rem;
     font-family: 'Panchang';
     visibility: hidden;
-    animation-name: about-animation;
-    animation-duration: 0.75s;
-    animation-delay: 0.8s;
-    animation-fill-mode: forwards;
+    animation: about-animation 0.75s 0.8s forwards;
 }
 
 .aboutBackground h2 {

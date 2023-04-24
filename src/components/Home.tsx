@@ -1,4 +1,4 @@
-import './FirstPage.css';
+import './Home.css';
 import { Link } from 'react-router-dom';
 import iconLinkedin from './assets/images/linkedin.svg';
 import iconGithub from './assets/images/github.svg';
@@ -8,6 +8,12 @@ const Navbar = () => {
     const contactTitleRef = useRef<HTMLParagraphElement>(null);
     const contactsRef = useRef<HTMLDivElement>(null);
     let contactsActive = false;
+
+    window.addEventListener("blur", () => {
+        contactsActive = false;
+        contactTitleRef.current?.classList.remove('contactHover');
+        return contactsRef.current?.classList.remove('animateLinks');
+    });
 
     const contactsHandler = (e: MouseEvent<HTMLParagraphElement>) => {
         const target = e.target as HTMLElement;
@@ -25,7 +31,7 @@ const Navbar = () => {
     }
 
     return (
-        <section className='firstPage'>
+        <section className='home'>
             <section className='navbar'>
                 <p className='backgroundCredit'>Background by <a className='creditLink' href='https://unsplash.com/@fakurian' target="_blank" rel="noopener noreferrer">@fakurian</a></p>
                 <div className='menu' onMouseMove={contactsHandler}>

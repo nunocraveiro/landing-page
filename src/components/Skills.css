@@ -28,7 +28,6 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    /* border: 1px solid white; */
     width: 55rem;
     height: 4rem;
     margin-bottom: 2rem;
