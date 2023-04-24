@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b4c17c79.css",
+    "main.js": "/static/js/main.8aff2a56.js",
+    "static/js/787.6606bfd5.chunk.js": "/static/js/787.6606bfd5.chunk.js",
+    "static/media/1-grain.jpg": "/static/media/1-grain.17a361b73f75a41a757f.jpg",
+    "static/media/flightsapp.png": "/static/media/flightsapp.6dfde858f6e307a8e82f.png",
+    "static/media/milkapp.png": "/static/media/milkapp.3c09ed454c2a36ad4b93.png",
+    "static/media/todoapp.png": "/static/media/todoapp.96597b7c788682989ab1.png",
+    "static/media/PPNeueMachina-InktrapUltrabold.otf": "/static/media/PPNeueMachina-InktrapUltrabold.fb684ef5ee9ec89f251b.otf",
+    "static/media/PPNeueMachina-PlainUltrabold.otf": "/static/media/PPNeueMachina-PlainUltrabold.d0c9688b561e5f9d666b.otf",
+    "static/media/PPNeueMachina-InktrapRegular.otf": "/static/media/PPNeueMachina-InktrapRegular.01baa3a95952a01856a3.otf",
+    "static/media/PPNeueMachina-InktrapLight.otf": "/static/media/PPNeueMachina-InktrapLight.7598449634f6cc24e7c3.otf",
+    "static/media/PPNeueMachina-PlainRegular.otf": "/static/media/PPNeueMachina-PlainRegular.c1fe9e8fedaaf2eed971.otf",
+    "static/media/PPNeueMachina-PlainLight.otf": "/static/media/PPNeueMachina-PlainLight.963e24ed86839ab057e0.otf",
+    "static/media/PPFragment-GlareExtraBold.otf": "/static/media/PPFragment-GlareExtraBold.cc26d9fbeac3e01b3fb1.otf",
+    "static/media/PPFragment-GlareRegular.otf": "/static/media/PPFragment-GlareRegular.469b0a93986e8179e742.otf",
+    "static/media/PPFragment-GlareLight.otf": "/static/media/PPFragment-GlareLight.e80a7eb6ae6d72b364ed.otf",
+    "static/media/PPFragment-SerifExtraBold.otf": "/static/media/PPFragment-SerifExtraBold.06895ce1cbe0b9a4c687.otf",
+    "static/media/PPFragment-SansExtraBold.otf": "/static/media/PPFragment-SansExtraBold.534ab2e191071211d7ef.otf",
+    "static/media/PPFragment-SerifLight.otf": "/static/media/PPFragment-SerifLight.e5c9597293e4e297018a.otf",
+    "static/media/PPFragment-SerifRegular.otf": "/static/media/PPFragment-SerifRegular.e11d3907dfc5a897823b.otf",
+    "static/media/PPFragment-SansRegular.otf": "/static/media/PPFragment-SansRegular.57beefc40822712be588.otf",
+    "static/media/PPFragment-SansLight.otf": "/static/media/PPFragment-SansLight.4c7a729d1d6ebce7ff40.otf",
+    "static/media/Panchang-Bold.otf": "/static/media/Panchang-Bold.1ba5dc4dcf5417803d12.otf",
+    "static/media/Panchang-Semibold.otf": "/static/media/Panchang-Semibold.3463a04d26eefd33b1f8.otf",
+    "index.html": "/index.html",
+    "static/media/github.svg": "/static/media/github.3b21c250a99986431958daaa9246a45a.svg",
+    "static/media/linkedin.svg": "/static/media/linkedin.98956d298e14a6384fdb39c42269f2f2.svg",
+    "main.b4c17c79.css.map": "/static/css/main.b4c17c79.css.map",
+    "main.8aff2a56.js.map": "/static/js/main.8aff2a56.js.map",
+    "787.6606bfd5.chunk.js.map": "/static/js/787.6606bfd5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b4c17c79.css",
+    "static/js/main.8aff2a56.js"
+  ]
+}
