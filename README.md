@@ -1,8 +1,1 @@
 # Personal website
-
-
-## Available Scripts
-
-
-
-
