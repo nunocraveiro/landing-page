@@ -17,26 +17,31 @@ const Navbar = () => {
 
     const contactsHandler = (e: MouseEvent<HTMLParagraphElement>) => {
         const target = e.target as HTMLElement;
+        console.log(target.className);
         if (target.className.includes('menuP contactLink') && !contactsActive) {
             contactsActive = true;
             contactTitleRef.current?.classList.add('contactHover');
             return contactsRef.current?.classList.add('animateLinks');
         }
+        if ((target.className === 'contactLinksContainer' || target.className === 'menu' || target.className === 'divContainer') && contactsActive) {
+            contactsActive = false;
+            contactTitleRef.current?.classList.remove('contactHover');
+            return contactsRef.current?.classList.remove('animateLinks');
+        }
         if (target.className.toLowerCase().includes('contact') && contactsActive) {
             return;
         }
-        contactsActive = false;
-        contactTitleRef.current?.classList.remove('contactHover');
-        return contactsRef.current?.classList.remove('animateLinks');
     }
 
     return (
         <section className='home'>
-            <section className='navbar'>
-                <p className='backgroundCredit'>Background by <a className='creditLink' href='https://unsplash.com/@fakurian' target="_blank" rel="noopener noreferrer">@fakurian</a></p>
-                <div className='menu' onMouseMove={contactsHandler}>
-                    <Link className='menuP aboutLink' to="/about">ABOUT</Link>
-                    <Link className='menuP workLink' to="/work">WORK</Link>
+            <p className='backgroundCredit'>Background by <a className='creditLink' href='https://unsplash.com/@fakurian' target="_blank" rel="noopener noreferrer">@fakurian</a></p>
+            {/* <section className='navbar'>
+            </section> */}
+            <div className='menu' onMouseMove={contactsHandler}>
+                <Link className='menuP aboutLink' to="/about">ABOUT</Link>
+                <Link className='menuP workLink' to="/work">WORK</Link>
+                <div className='divContainer'>
                     <p className='menuP contactLink' ref={contactTitleRef}>CONTACT</p>
                     <div className='contactLinksContainer'>
                         <div className='contactLinks' ref={contactsRef}>
@@ -55,7 +60,7 @@ const Navbar = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
             <div className='centralText'>
                 <div className='hello'>
                     {'Hello!'.split("").map((char, i) => <span className='helloSpan' key={i} style={{'--animation-order': i} as React.CSSProperties}>{char}</span>)}

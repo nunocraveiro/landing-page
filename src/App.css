@@ -112,3 +112,10 @@
     opacity: 1;
   }
 }
+
+/* @media screen and (max-width: 767px) {
+  .background {
+    width: 30vw;
+    height: 30vh;
+  }
+} */
