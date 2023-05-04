@@ -12,28 +12,6 @@
     animation: workBackground-animation 0.6s 0.2s forwards;
 }
 
-.backArrowContainer {
-    width: 4.2rem;
-    overflow: hidden;
-    position: relative;
-    top: 1rem;
-    right: 2rem;
-    transition: right 0.4s;
-}
-
-.backArrowContainer:hover {
-    right: 2.5rem;
-    transition: right 0.4s;
-}
-
-.backArrow {
-    font-size: 4rem;
-    visibility: hidden;
-    animation: backArrow-animation 0.9s 0.8s forwards;
-    cursor: pointer;
-    user-select: none;
-}
-
 .workTitleContainer {
     overflow: hidden;
     margin-top: 1.5rem;
@@ -157,5 +135,47 @@
     100% {
         transform: translateY(0rem);
         visibility: visible;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .work {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .workH1 {
+        font-size: 13.5vw;
+    }
+    .workTitleContainer {
+        line-height: normal;
+    }
+    .aboutText {
+        margin-bottom: 1.5rem;
+    }
+    .aboutText p {
+        font-size: 4vw;
+    }
+    .container {
+        margin-top: 1rem;
+        padding-right: 0.8rem;
+    }
+    .container p {
+        margin-bottom: 0.5rem;
+        font-size: 3.8vw;
+    }
+    .workCard {
+        width: 85vw;
+    }
+    .workCard img {
+        width: 85vw;
+        align-self: auto;
+    }
+    .workDescription {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 3.8vw;
+    }
+    .workCardsContainer {
+        gap: 3rem;
     }
 }

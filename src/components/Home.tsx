@@ -17,7 +17,6 @@ const Navbar = () => {
 
     const contactsHandler = (e: MouseEvent<HTMLParagraphElement>) => {
         const target = e.target as HTMLElement;
-        console.log(target.className);
         if (target.className.includes('menuP contactLink') && !contactsActive) {
             contactsActive = true;
             contactTitleRef.current?.classList.add('contactHover');
@@ -33,16 +32,26 @@ const Navbar = () => {
         }
     }
 
+    const mobileContactClick = () => {
+        if (!contactsActive) {
+            console.log('hey idiot')
+            contactsActive = true;
+            contactTitleRef.current?.classList.add('contactHover');
+            return contactsRef.current?.classList.add('animateLinks');
+        }
+        contactsActive = false;
+        contactTitleRef.current?.classList.remove('contactHover');
+        return contactsRef.current?.classList.remove('animateLinks');
+    }
+
     return (
         <section className='home'>
             <p className='backgroundCredit'>Background by <a className='creditLink' href='https://unsplash.com/@fakurian' target="_blank" rel="noopener noreferrer">@fakurian</a></p>
-            {/* <section className='navbar'>
-            </section> */}
-            <div className='menu' onMouseMove={contactsHandler}>
+            <div className='menu' onMouseMove={window.innerWidth > 767 ? contactsHandler : undefined}>
                 <Link className='menuP aboutLink' to="/about">ABOUT</Link>
                 <Link className='menuP workLink' to="/work">WORK</Link>
                 <div className='divContainer'>
-                    <p className='menuP contactLink' ref={contactTitleRef}>CONTACT</p>
+                    <p className='menuP contactLink' onClick={window.innerWidth <= 767 ? mobileContactClick : undefined} ref={contactTitleRef}>CONTACT</p>
                     <div className='contactLinksContainer'>
                         <div className='contactLinks' ref={contactsRef}>
                             <div className='contactLinkDiv'>

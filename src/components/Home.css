@@ -3,28 +3,18 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
-    /* position: relative; */
 }
-
-/* .navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: right;
-    border: 1px solid white;
-    height: 10rem;
-} */
 
 .backgroundCredit {
     color: rgb(191, 191, 191);
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 0.7rem;
-    transform: rotate(90deg);
-    position: absolute;
-    bottom: 7rem;
-    left: -4rem;
+    writing-mode: vertical-lr;
+    position: fixed;
+    bottom: 0;
+    margin-left: 0.3rem;
+    margin-bottom: 2rem;
     word-spacing: 0.2rem;
 }
 
@@ -35,19 +25,11 @@
 .menu {
     padding-top: 3rem;
     padding-left: auto;
-    /* padding-bottom: 1rem; */
     display: flex;
     flex-direction: column;
     font-family: 'NeueMachinaPlain';
     width: 100vw;
     align-items: flex-end;
-    /* width: fit-content; */
-    /* height: fit-content; */
-    /* height: 20rem; */
-    /* height: 30vh; */
-    /* border: 1px solid white; */
-    /* position: relative; */
-    /* overflow: visible; */
 }
 
 .menuP {
@@ -94,14 +76,12 @@
 
 .contactLinksContainer {
     overflow: hidden;
-    /* position: relative; */
     position: absolute;
     right: 0.2rem;
     padding-bottom: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
     width: 19rem;
-    /* border: 1px solid white; */
 }
 
 .contactLinks {
@@ -121,7 +101,6 @@
     opacity: 0;
     transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
     margin-left: auto;
-    /* border: 1px solid white; */
 }
 
 .animateLinks {
@@ -169,9 +148,6 @@
     color: white;
     font-size: 4rem;
     font-weight: 300;
-    /* position: absolute; */
-    /* top: 13rem; */
-    /* border: 1px solid white; */
 }
 
 .hello {
@@ -282,11 +258,12 @@
         align-items: flex-start;
         padding-top: 1.5rem;
         padding-left: 1.2rem;
-        padding-right: 1.2rem;
+        padding-right: 1rem;
     }
     .menuP {
         margin-bottom: 1rem;
-        font-size: 7.5vw;
+        font-size: 6.5vw;
+        height: 2.5vh;
     }
     .aboutLink {
         margin-right: 0rem;
@@ -309,21 +286,26 @@
         padding: 0;
         left: 1rem;
     }
+    .centralText {
+        margin-top: 25vh;
+        width: 100vw;
+    }
     .hello {
-        margin-left: 0rem;
-        padding-bottom: 2.5rem;
-        font-weight: 700;
-        font-size: 6rem;
-        font-family: 'Panchang';
+        margin-left: 6vw;
+        font-size: 23vw;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
     }
     .p2 {
-        width: 15rem;
-        margin-left: 0rem;
-        font-size: 2rem;
+        width: fit-content;
+        margin-left: 6vw;
+        font-size: 8vw;
     }
     .p3 {
-        margin-left: 0rem;
-        font-size: 2rem;
+        margin-left: 6vw;
+        font-size: 8vw;
     }
-
+    .backgroundCredit {
+        font-size: 1.2vh;
+    }
 }

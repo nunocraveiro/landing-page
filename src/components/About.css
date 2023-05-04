@@ -26,14 +26,15 @@
 .backArrow {
     font-size: 4rem;
     visibility: hidden;
-    animation: backArrow-animation 0.75s 0.8s forwards;
+    animation: backArrow-animation 0.9s 0.8s forwards;
+    cursor: pointer;
     user-select: none;
 }
 
 .aboutTitleContainer {
     overflow: hidden;
     margin-bottom: 1.5rem;
-    height: 10rem;
+    height: fit-content;
 }
 
 .aboutH1 {
@@ -41,10 +42,6 @@
     font-family: 'Panchang';
     visibility: hidden;
     animation: about-animation 0.75s 0.8s forwards;
-}
-
-.aboutBackground h2 {
-    margin-bottom: 0.5rem;
 }
 
 .aboutText {
@@ -94,5 +91,35 @@
     100% {
         transform: translateY(0rem);
         visibility: visible;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .about {
+        padding-left: 1.5rem;
+    }
+    .backArrowContainer {
+        right: 0.7rem;
+        margin-bottom: 1rem;
+    }
+    .backArrow {
+        font-size: 10vw;
+    }
+    .aboutH1 {
+        font-size: 13.5vw;
+    }
+    .aboutText {
+        margin-bottom: 1.5rem;
+    }
+    .aboutText p {
+        font-size: 4vw;
+    }
+    .container {
+        margin-top: 1rem;
+        padding-right: 0.8rem;
+    }
+    .container p {
+        margin-bottom: 0.5rem;
+        font-size: 3.8vw;
     }
 }
