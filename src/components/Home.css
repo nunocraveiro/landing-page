@@ -41,6 +41,7 @@
     color: white;
     text-decoration: none;
     width: fit-content;
+    cursor: pointer;
 }
 
 .contactHover {
@@ -61,7 +62,6 @@
 
 .contactLink {
     margin-right: 3rem;
-    cursor: pointer;
     user-select: none;
     margin-bottom: 0rem;
 }
@@ -147,6 +147,20 @@
     font-weight: 700;
     font-size: 8rem;
     font-family: 'Panchang';
+}
+.animateHello {
+    animation: animateHello 0.05s forwards;
+    -webkit-animation: animateHello 0.05s forwards;
+}
+@keyframes animateHello {
+    100% {
+        opacity: 0;
+    }
+}
+@-webkit-keyframes animateHello {
+    100% {
+        opacity: 0;
+    }
 }
 
 .helloSpan {

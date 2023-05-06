@@ -2,12 +2,14 @@ import './Home.css';
 import { Link } from 'react-router-dom';
 import iconLinkedin from './assets/images/linkedin.svg';
 import iconGithub from './assets/images/github.svg';
-import { MouseEvent, useEffect, useRef } from 'react';
+import { MouseEvent, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
     const contactTitleRef = useRef<HTMLParagraphElement>(null);
     const contactsRef = useRef<HTMLDivElement>(null);
     const helloRef = useRef<HTMLDivElement>(null);
+    const navigate = useNavigate();
     let contactsActive = false;
 
     window.addEventListener("blur", () => {
@@ -35,7 +37,6 @@ const Navbar = () => {
 
     const mobileContactClick = () => {
         if (!contactsActive) {
-            console.log('hey idiot')
             contactsActive = true;
             contactTitleRef.current?.classList.add('contactHover');
             return contactsRef.current?.classList.add('animateLinks');
@@ -45,12 +46,23 @@ const Navbar = () => {
         return contactsRef.current?.classList.remove('animateLinks');
     }
 
+    const sillySafariFix = (e: MouseEvent<HTMLDivElement>) => {
+        const target = e.target as HTMLElement;
+        helloRef.current?.classList.add('animateHello');
+        setTimeout(() => {
+            if (target.innerHTML === 'ABOUT') {
+                return navigate('/about');
+            }
+            return navigate('/work');
+        }, 50);
+    }
+
     return (
         <section className='home'>
             <p className='backgroundCredit'>Background by <a className='creditLink' href='https://unsplash.com/@fakurian' target="_blank" rel="noopener noreferrer">@fakurian</a></p>
             <div className='menu' onMouseMove={window.innerWidth > 767 ? contactsHandler : undefined}>
-                <Link className='menuP aboutLink' to="/about">ABOUT</Link>
-                <Link className='menuP workLink' to="/work">WORK</Link>
+                <div className='menuP aboutLink' onClick={sillySafariFix}>ABOUT</div>
+                <div className='menuP workLink' onClick={sillySafariFix}>WORK</div>
                 <div className='divContainer'>
                     <p className='menuP contactLink' onClick={window.innerWidth <= 767 ? mobileContactClick : undefined} ref={contactTitleRef}>CONTACT</p>
                     <div className='contactLinksContainer'>
