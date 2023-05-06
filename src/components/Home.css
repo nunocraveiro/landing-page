@@ -44,26 +44,35 @@
     cursor: pointer;
 }
 
-.contactHover {
-    font-weight: 500;
-    font-style: italic;
-    letter-spacing: 0.5rem;
-    transition: letter-spacing 0.5s;
-    -webkit-transition: letter-spacing 0.5s;
-}
-
-.aboutLink {
-    margin-right: 19rem;
-}
-
-.workLink {
-    margin-right: 13rem;
-}
-
 .contactLink {
     margin-right: 3rem;
     user-select: none;
     margin-bottom: 0rem;
+    letter-spacing: normal;
+    transition: letter-spacing 0.3s ease-out;
+    -webkit-transition: letter-spacing 0.3s ease-out;
+}
+
+.contactHover {
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: 0.5rem;
+    transition: letter-spacing 0.4s ease-out;
+    -webkit-transition: letter-spacing 0.4s ease-out;
+}
+
+.aboutLink {
+    margin-right: 19rem;
+    letter-spacing: normal;
+    transition: letter-spacing 0.3s ease-out;
+    -webkit-transition: letter-spacing 0.3s ease-out;
+}
+
+.workLink {
+    margin-right: 13rem;
+    letter-spacing: normal;
+    transition: letter-spacing 0.3s ease-out;
+    -webkit-transition: letter-spacing 0.3s ease-out;
 }
 
 .divContainer {
@@ -275,8 +284,8 @@
         font-weight: 500;
         font-style: italic;
         letter-spacing: 0.5rem;
-        transition: letter-spacing 0.5s;
-        -webkit-transition: letter-spacing 0.5s;
+        transition: letter-spacing 0.4s ease-out;
+        -webkit-transition: letter-spacing 0.4s ease-out;
     }
     .contactImg:hover {
         transform: scale(0.96);
@@ -307,6 +316,14 @@
     }
     .contactLink {
         margin-right: 0rem;
+        letter-spacing: normal;
+        transition: letter-spacing 0.3s ease-out;
+        -webkit-transition: letter-spacing 0.3s ease-out;
+    }
+    .contactHover {
+        letter-spacing: 0.5rem;
+        transition: letter-spacing 0.3s ease-out;
+        -webkit-transition: letter-spacing 0.3s ease-out;
     }
     .divContainer {
         align-self: flex-end;
