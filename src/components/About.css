@@ -7,6 +7,7 @@
     padding-top: 1rem;
     padding-left: 4rem;
     animation: background-animation 0.7s 0.2s forwards;
+    -webkit-animation: background-animation 0.7s 0.2s forwards;
 }
 
 .backArrowContainer {
@@ -16,17 +17,14 @@
     top: 1rem;
     right: 2rem;
     transition: right 0.4s;
-}
-
-.backArrowContainer:hover {
-    right: 2.5rem;
-    transition: right 0.4s;
+    -webkit-transition: right 0.4s;
 }
 
 .backArrow {
     font-size: 4rem;
     visibility: hidden;
     animation: backArrow-animation 0.9s 0.8s forwards;
+    -webkit-animation: backArrow-animation 0.9s 0.8s forwards;
     cursor: pointer;
     user-select: none;
 }
@@ -42,6 +40,7 @@
     font-family: 'Panchang';
     visibility: hidden;
     animation: about-animation 0.75s 0.8s forwards;
+    -webkit-animation: about-animation 0.75s 0.8s forwards;
 }
 
 .aboutText {
@@ -57,14 +56,27 @@
 .container {
     display: flex;
     flex-direction: row;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
 }
 
 .container div {
     width: 18rem;
 }
 
+.tools {
+    padding-bottom: 2rem;
+}
+
 @keyframes backArrow-animation {
+    0% {
+        transform: translateX(5rem);
+    }
+    100% {
+        transform: translateX(0rem);
+        visibility: visible;
+	}
+}
+@-webkit-keyframes backArrow-animation {
     0% {
         transform: translateX(5rem);
     }
@@ -83,6 +95,15 @@
         visibility: visible;
 	}
 }
+@-webkit-keyframes about-animation {
+    0% {
+        transform: translateY(9rem);
+    }
+    100% {
+        transform: translateY(0rem);
+        visibility: visible;
+	}
+}
 
 @keyframes background-animation {
     0% {
@@ -91,6 +112,23 @@
     100% {
         transform: translateY(0rem);
         visibility: visible;
+    }
+}
+@-webkit-keyframes background-animation {
+    0% {
+        transform: translateY(45rem);
+    }
+    100% {
+        transform: translateY(0rem);
+        visibility: visible;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .backArrowContainer:hover {
+        right: 2.5rem;
+        transition: right 0.4s;
+        -webkit-transition: right 0.4s;
     }
 }
 

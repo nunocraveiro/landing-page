@@ -2,11 +2,12 @@ import './Home.css';
 import { Link } from 'react-router-dom';
 import iconLinkedin from './assets/images/linkedin.svg';
 import iconGithub from './assets/images/github.svg';
-import { MouseEvent, useRef } from 'react';
+import { MouseEvent, useEffect, useRef } from 'react';
 
 const Navbar = () => {
     const contactTitleRef = useRef<HTMLParagraphElement>(null);
     const contactsRef = useRef<HTMLDivElement>(null);
+    const helloRef = useRef<HTMLDivElement>(null);
     let contactsActive = false;
 
     window.addEventListener("blur", () => {
@@ -71,20 +72,20 @@ const Navbar = () => {
                 </div>
             </div>
             <div className='centralText'>
-                <div className='hello'>
+                <div className='hello' ref={helloRef}>
                     {'Hello!'.split("").map((char, i) => <span className='helloSpan' key={i} style={{'--animation-order': i} as React.CSSProperties}>{char}</span>)}
                 </div>
-                <p className='p2'>My name is <span className='nuno'>Nuno</span></p>
+                <p className='p2'>My name is <Link className='nuno' to="/about">Nuno</Link></p>
                 <p className='p3'>and I'm a web developer</p>
             </div>
             <div className="sliderContainer">
                 <div className="slider">
                     <div>
                         <h1>
-                            <span>Frontend development</span><span>/</span><span>Backend development</span><span>/</span><span>UX/UI design</span><span>/</span><span>Music composition</span><span>/</span><span>Adaptability</span><span>/</span><span>Teamwork</span><span>/</span><span>Creativity</span><span>/</span><span>Critical thinking</span><span>/</span>&nbsp;
+                            <span>Frontend development</span><span>Backend development</span><span>UX/UI design</span><span>Music composition</span><span>Adaptability</span><span>Teamwork</span><span>Creativity</span><span>Critical thinking</span><span>Frontend development</span><span>Backend development</span><span>UX/UI design</span><span>Music composition</span><span>Adaptability</span><span>Teamwork</span><span>Creativity</span><span>Critical thinking</span><span>Frontend development</span><span>Backend development</span><span>UX/UI design</span><span>Music composition</span><span>Adaptability</span><span>Teamwork</span><span>Creativity</span><span>Critical thinking</span>
                         </h1>
                         <h1>
-                            <span>Frontend development</span><span>/</span><span>Backend development</span><span>/</span><span>UX/UI design</span><span>/</span><span>Music composition</span><span>/</span><span>Adaptability</span><span>/</span><span>Teamwork</span><span>/</span><span>Creativity</span><span>/</span><span>Critical thinking</span><span>/</span>&nbsp;
+                            <span>Frontend development</span><span>Backend development</span><span>UX/UI design</span><span>Music composition</span><span>Adaptability</span><span>Teamwork</span><span>Creativity</span><span>Critical thinking</span><span>Frontend development</span><span>Backend development</span><span>UX/UI design</span><span>Music composition</span><span>Adaptability</span><span>Teamwork</span><span>Creativity</span><span>Critical thinking</span><span>Frontend development</span><span>Backend development</span><span>UX/UI design</span><span>Music composition</span><span>Adaptability</span><span>Teamwork</span><span>Creativity</span><span>Critical thinking</span>
                         </h1>
                     </div>
                 </div>

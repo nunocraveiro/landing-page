@@ -1,8 +1,9 @@
 .home {
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .backgroundCredit {
@@ -10,10 +11,11 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 0.7rem;
-    writing-mode: vertical-lr;
-    position: fixed;
+    writing-mode: vertical-rl;
+    position: absolute;
+    right: 0;
     bottom: 0;
-    margin-left: 0.3rem;
+    margin-right: 0.3rem;
     margin-bottom: 2rem;
     word-spacing: 0.2rem;
 }
@@ -41,18 +43,12 @@
     width: fit-content;
 }
 
-.aboutLink:hover, .workLink:hover {
-    font-weight: 500;
-    font-style: italic;
-    letter-spacing: 0.5rem;
-    transition: letter-spacing 0.5s;
-}
-
 .contactHover {
     font-weight: 500;
     font-style: italic;
     letter-spacing: 0.5rem;
     transition: letter-spacing 0.5s;
+    -webkit-transition: letter-spacing 0.5s;
 }
 
 .aboutLink {
@@ -100,6 +96,7 @@
     top: -10rem;
     opacity: 0;
     transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    -webkit-transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
     margin-left: auto;
 }
 
@@ -107,6 +104,7 @@
     top: 0rem;
     opacity: 1;
     transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    -webkit-transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 .contactLinkDiv {
@@ -136,18 +134,11 @@
     padding-top: 0.17rem;
 }
 
-.contactImg:hover {
-    transform: scale(0.96);
-}
-
-.contactP:hover {
-    text-decoration: underline;
-}
-
 .centralText {
     color: white;
     font-size: 4rem;
     font-weight: 300;
+    margin-top: 5vh;
 }
 
 .hello {
@@ -159,13 +150,17 @@
 }
 
 .helloSpan {
+    opacity: 0;
     position: relative;
     animation-name: move-text;
     animation-duration: 0.75s;
     animation-delay: calc(0.35s + var(--animation-order) * 100ms);
     animation-fill-mode: forwards;
+    -webkit-animation-name: move-text;
+    -webkit-animation-duration: 0.75s;
+    -webkit-animation-delay: calc(0.35s + var(--animation-order) * 100ms);
+    -webkit-animation-fill-mode: forwards;
     bottom: -1em;
-    opacity: 0;
 }
 
 .p2 {
@@ -177,7 +172,9 @@
 }
 
 .nuno {
+    text-decoration: none;
     border-bottom: 1px solid white;
+    color: white;
 }
 
 .p3 {
@@ -187,37 +184,33 @@
 }
 
 .sliderContainer {
-    display: flex;
-    position: relative;
-    width: 100%;
-    height: 4rem;
+    position: absolute;
+    width: 100vw;
+    height: 4vh;
     background-color: rgba(255,255,255,0);
     overflow: hidden;
-    position: relative;
-    margin-top: auto;
+    bottom: 0;
 }
-
 .slider {
     display: flex;
     position: absolute;
-    top: 1rem;
     align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    height: 100%;
+    line-height: 1.5rem;
     white-space: nowrap;
 }
-
 .slider div {
     display: flex;
-    animation: scrollText 16s infinite linear;
+    flex-direction: row;
+    animation: scrollText 22s infinite linear;
+    -webkit-animation: scrollText 22s infinite linear;
 }
 
 .slider h1 {
-    margin: 0;
+    display: flex;
+    flex-direction: row;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    font-size: 1.05rem;
+    font-size: 2.2vh;
     color: white;
 }
 
@@ -233,30 +226,56 @@
         transform: translateX(-50%);
     }
 }
-
-@keyframes move-text {
-    0% {
-      bottom: -0.2em;
+@-webkit-keyframes scrollText {
+    from {
+        transform: translateX(0%); 
     }
-    100% {
-      bottom: 0;
-      opacity: 1;
+    to {
+        transform: translateX(-50%);
     }
 }
 
-@keyframes home-animation {
+@keyframes move-text {
     0% {
-      opacity: 0;
+        opacity: 0;
+        bottom: -0.2em;
     }
     100% {
-      opacity: 1;
+        bottom: 0;
+        opacity: 1;
+    }
+}
+@-webkit-keyframes move-text {
+    0% {
+        opacity: 0;
+        bottom: -0.2em;
+    }
+    100% {
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .aboutLink:hover, .workLink:hover {
+        font-weight: 500;
+        font-style: italic;
+        letter-spacing: 0.5rem;
+        transition: letter-spacing 0.5s;
+        -webkit-transition: letter-spacing 0.5s;
+    }
+    .contactImg:hover {
+        transform: scale(0.96);
+    }
+    .contactP:hover {
+        text-decoration: underline;
     }
 }
 
 @media screen and (max-width: 767px) {
     .menu {
         align-items: flex-start;
-        padding-top: 1.5rem;
+        padding-top: 2rem;
         padding-left: 1.2rem;
         padding-right: 1rem;
     }
@@ -270,7 +289,7 @@
     }
     .workLink {
         align-self: center;
-        margin-right: 2.5rem;
+        margin-right: 2rem;
     }
     .contactLink {
         margin-right: 0rem;
@@ -287,7 +306,7 @@
         left: 1rem;
     }
     .centralText {
-        margin-top: 25vh;
+        margin-top: 15vh;
         width: 100vw;
     }
     .hello {
@@ -307,5 +326,9 @@
     }
     .backgroundCredit {
         font-size: 1.2vh;
+    }
+    .slider div {
+        animation: scrollText 40s infinite linear;
+        -webkit-animation: scrollText 40s infinite linear;
     }
 }
